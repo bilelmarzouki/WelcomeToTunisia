@@ -28,7 +28,7 @@
       "shortDescription": "Old town alleys, souks, and monuments.",
       "longDescription": "A great area to walk and explore traditional markets and architecture.",
       "address": "Medina, Tunis",
-      "lat": 36.7978,
+      "lat": 36.7978, 
       "lng": 10.1716,
       "bestTimeToVisit": "Morning",
       "entryFeeTND": 2,
@@ -38,11 +38,11 @@
       "id": 102,
       "cityId": 1,
       "name": "Sidi Bou Said",
-      "category": "Viewpoint",
+      "category": "Beach",
       "shortDescription": "Blue-and-white village with sea views.",
       "longDescription": "Famous for its architecture, cafés, and views over the Mediterranean.",
       "address": "Sidi Bou Said, Tunis",
-      "lat": 36.8702,
+      "lat": 36.8702, 
       "lng": 10.3417,
       "bestTimeToVisit": "Sunset",
       "entryFeeTND": 3,
@@ -56,12 +56,27 @@
       "shortDescription": "UNESCO medina with old walls and markets.",
       "longDescription": "Great for walking, shopping, and exploring the historic center.",
       "address": "Medina, Sousse",
-      "lat": 35.8264,
+      "lat": 35.8264, 
       "lng": 10.6386,
       "bestTimeToVisit": "Late afternoon",
-      "entryFeeTND": 0,
+      "entryFeeTND": 4,
       "coverImageUrl": "https://media.gettyimages.com/id/1371714391/photo/tunisia-sousse-medina.jpg?s=1024x1024&w=gi&k=20&c=Iexw_5tWs3Bh__UTK9OK4paiiXBHln82WZWT2EkAJMI="
+    },
+    {
+      "id": 202,
+      "cityId": 2,
+      "name": "Sousse Beach",
+      "category": "Beach",
+      "shortDescription": "Golden sands and turquoise Mediterranean waters.",
+      "longDescription": "Boujaafar Beach offers white sand, clear water, jet skiing, parasailing, and beach bars. Perfect family spot near the historic Medina.",
+      "address": "Boujaafar Beach, Sousse",
+      "lat": 35.8361,
+      "lng": 10.6370,
+      "bestTimeToVisit": "Summer mornings",
+      "entryFeeTND": 5,
+      "coverImageUrl": "https://www.tourismtunisia.com/wp-content/uploads/2012/03/Sousse.jpg"
     }
+    
   ],
   "photos": [
     {
