@@ -1,0 +1,13 @@
+{
+  "name": "welcome-to-tunisia-server",
+  "version": "1.0.0",
+  "description": "JSON Server for Tunisia tourism app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
