@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import CityCard from '../components/CityCard'
+import Stack from '@mui/material/Stack';
 function CitiesListPage() {
   const [cities, setCities] =useState(null)
     useEffect(()=>{
@@ -17,16 +18,18 @@ function CitiesListPage() {
         )
     }
   return (
-    <div>
+    
+    <Stack direction={{ xs: 'column', sm: 'row' }}
+       spacing={{ xs: 1, sm: 2, md: 4 }}
+       x={{ flexWrap: 'wrap' }}
+       sx={{height:"100%",width:"100%", display:"flex", alignItems:"stretch"}}
+    >
        {cities.map((city)=>{
          return(
-            <div>
               <CityCard key={city.id} {...city}/>
-            </div>
-           
          )
        })}
-    </div>
+    </Stack>
   )
 }
 

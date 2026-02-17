@@ -23,12 +23,12 @@
     {
       "id": 101,
       "cityId": 1,
-      "name": "Medina of Tunis",
+      "name": "Medina of Tunissss",
       "category": "Historic",
       "shortDescription": "Old town alleys, souks, and monuments.",
       "longDescription": "A great area to walk and explore traditional markets and architecture.",
       "address": "Medina, Tunis",
-      "lat": 36.7978, 
+      "lat": 36.7978,
       "lng": 10.1716,
       "bestTimeToVisit": "Morning",
       "entryFeeTND": 2,
@@ -42,7 +42,7 @@
       "shortDescription": "Blue-and-white village with sea views.",
       "longDescription": "Famous for its architecture, cafés, and views over the Mediterranean.",
       "address": "Sidi Bou Said, Tunis",
-      "lat": 36.8702, 
+      "lat": 36.8702,
       "lng": 10.3417,
       "bestTimeToVisit": "Sunset",
       "entryFeeTND": 3,
@@ -51,15 +51,15 @@
     {
       "id": 201,
       "cityId": 2,
-      "name": "Medina of Sousse",
+      "name": "",
       "category": "Historic",
       "shortDescription": "UNESCO medina with old walls and markets.",
       "longDescription": "Great for walking, shopping, and exploring the historic center.",
       "address": "Medina, Sousse",
-      "lat": 35.8264, 
+      "lat": 35.8264,
       "lng": 10.6386,
       "bestTimeToVisit": "Late afternoon",
-      "entryFeeTND": 4,
+      "entryFeeTND": "6",
       "coverImageUrl": "https://media.gettyimages.com/id/1371714391/photo/tunisia-sousse-medina.jpg?s=1024x1024&w=gi&k=20&c=Iexw_5tWs3Bh__UTK9OK4paiiXBHln82WZWT2EkAJMI="
     },
     {
@@ -71,33 +71,53 @@
       "longDescription": "Boujaafar Beach offers white sand, clear water, jet skiing, parasailing, and beach bars. Perfect family spot near the historic Medina.",
       "address": "Boujaafar Beach, Sousse",
       "lat": 35.8361,
-      "lng": 10.6370,
+      "lng": 10.637,
       "bestTimeToVisit": "Summer mornings",
       "entryFeeTND": 5,
       "coverImageUrl": "https://www.tourismtunisia.com/wp-content/uploads/2012/03/Sousse.jpg"
     }
-    
   ],
   "photos": [
     {
       "id": 1001,
       "placeId": 101,
-      "url": "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-      "alt": "Medina of Tunis",
+      "url": "https://www.entreprises-magazine.com/wp-content/uploads/2021/12/Tunisie-LAvenue-Habib-Bourguiba.jpg",
+      "alt": "Avenue Hbib Burguiba",
       "isCover": true
+    },
+    {
+      "id": 2001,
+      "placeId": 201,
+      "url": "https://explore.rehlat.ae/static/media/searchdestination/thingstodo/images/sousse/sousse_archaeological_museum/large_Archaeological_Museum_of_Sousse_07042013.webp",
+      "alt": "sousse museum",
+      "isCover": false
+    },
+    {
+      "id": 2002,
+      "placeId": 202,
+      "url": "https://c8.alamy.com/compfr/d2dbyy/port-el-kantaoui-pres-de-sousse-en-tunisie-d2dbyy.jpg",
+      "alt": "Port El Kantaoui",
+      "isCover": false
     },
     {
       "id": 1002,
       "placeId": 101,
-      "url": "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-      "alt": "Souk alley",
-      "isCover": false
+      "url": "https://cdn.britannica.com/96/178496-050-CB365D03/Punic-ruins-Roman-Carthage-Tunisia.jpg",
+      "alt": "Carthage old city",
+      "isCover": true
     },
     {
-      "id": 1101,
+      "id": 1105,
+      "placeId": 101,
+      "url": "https://preview.redd.it/745oevn8uo381.jpg?auto=webp&s=6c719917b36e046e841ba2df33eec09fa6400921",
+      "alt": "Carthage Port",
+      "isCover": true
+    },
+    {
+      "id": 1106,
       "placeId": 102,
-      "url": "https://res.cloudinary.com/demo/image/upload/sample.jpg",
-      "alt": "Sidi Bou Said street",
+      "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/53/be/77.jpg",
+      "alt": "sidi boussaid Medina",
       "isCover": true
     }
   ]
