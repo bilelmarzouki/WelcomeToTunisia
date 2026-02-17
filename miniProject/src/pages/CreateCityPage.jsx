@@ -25,20 +25,7 @@ function EditPlacePage() {
   const [coverImageUrl, setCoverImageUrl] = useState("");
 
   const navigate = useNavigate();
-  const addPlace = () => {
-    try {
-      const body={
-
-      }
-      axios.post(`http://localhost:5005/places`,body);
-      setEntryFeeTND(response.data.entryFeeTND);
-      setLongDescription(response.data.longDescription);
-      setBestTimeToVisit(response.data.bestTimeToVisit);
-      setPlace(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = {
@@ -75,7 +62,12 @@ function EditPlacePage() {
               fullWidth
               label="place id"
               value={id}
-              onChange={(e) => setId(e.target.value)}
+              onChange={(e) => {
+                const numValue = parseInt(e.target.value);
+                if (!isNaN(numValue)) {
+                  setId(numValue);
+                }
+              }}
               sx={{ mb: 3 }}
               required
             />
@@ -83,7 +75,12 @@ function EditPlacePage() {
               fullWidth
               label="City id"
               value={cityId}
-              onChange={(e) => setCityId(e.target.value)}
+              onChange={(e) => {
+                const numValue = parseInt(e.target.value);
+                if (!isNaN(numValue)) {
+                  setCityId(numValue);
+                }
+              }}
               sx={{ mb: 3 }}
               required
             />
@@ -143,7 +140,7 @@ function EditPlacePage() {
               fullWidth
               label="lngitide"
               value={lng}
-              onChange={(e) => setLat(e.target.value)}
+              onChange={(e) => setLng(e.target.value)}
               sx={{ mb: 3 }}
               required
             />
@@ -166,7 +163,7 @@ function EditPlacePage() {
             />
              <TextField
               fullWidth
-              label="fee of the entry"
+              label="image Url"
               value={coverImageUrl}
               onChange={(e) => setCoverImageUrl(e.target.value)}
               sx={{ mb: 3 }}

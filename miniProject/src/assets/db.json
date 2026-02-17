@@ -23,7 +23,7 @@
     {
       "id": 101,
       "cityId": 1,
-      "name": "Medina of Tunissss",
+      "name": "Medina of Tunis",
       "category": "Historic",
       "shortDescription": "Old town alleys, souks, and monuments.",
       "longDescription": "A great area to walk and explore traditional markets and architecture.",
@@ -51,7 +51,7 @@
     {
       "id": 201,
       "cityId": 2,
-      "name": "",
+      "name": "sousse Medina",
       "category": "Historic",
       "shortDescription": "UNESCO medina with old walls and markets.",
       "longDescription": "Great for walking, shopping, and exploring the historic center.",
@@ -75,6 +75,20 @@
       "bestTimeToVisit": "Summer mornings",
       "entryFeeTND": 5,
       "coverImageUrl": "https://www.tourismtunisia.com/wp-content/uploads/2012/03/Sousse.jpg"
+    },
+    {
+      "id": 103,
+      "cityId": 1,
+      "name": "Marsa beach",
+      "category": "beach",
+      "shortDescription": "Chic Tunis beach with fine sand and elegant promenade.",
+      "longDescription": "La Marsa Beach - Tunis' trendiest beach! Fine golden sand, turquoise Mediterranean waters, palm-lined seaside promenade with chic cafés. Perfect for sunbathing, swimming, and strolling. Best May-June and September. Just 20min from Tunis center.",
+      "address": "Marsa, Tunis",
+      "lat": "65",
+      "lng": "40",
+      "bestTimeToVisit": "late",
+      "entryFeeTND": "2",
+      "coverImageUrl": "https://www.khllifestyle.com/application/files/9417/4168/2578/LM_Plage.jpg"
     }
   ],
   "photos": [
