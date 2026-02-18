@@ -15,7 +15,7 @@ function HomePage() {
     form.append('upload_preset', 'bilelmrz');
 
     try {
-      const response =await axios.post('https://api.cloudinary.com/v1_1/dy9upslic/upload', form);
+      const response =await axios.post(`https://api.cloudinary.com/v1_1/dy9upslic/upload`, form);
       //console.log(response.data)
       setUrl(response.data.secure_url)
       console.log('Upload success!');

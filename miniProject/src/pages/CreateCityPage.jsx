@@ -10,8 +10,9 @@ import {
   Container,
 } from "@mui/material";
 import axios from "axios";
+import UploadImage from "../components/UploadImage";
 function EditPlacePage() {
-  const [cityId, setCityId] = useState(null);
+  const [cityId, setCityId] = useState("");
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [shortDescription, setShortDescription] = useState("");
@@ -22,9 +23,37 @@ function EditPlacePage() {
   const [bestTimeToVisit, setBestTimeToVisit] = useState("");
   const [entryFeeTND, setEntryFeeTND] = useState("");
   const [coverImageUrl, setCoverImageUrl] = useState("");
-
+  /*const [file, setFile] = useState(""); // Keep for upload state
+  const [upload, setUpload] = useState(false);*/
   const navigate = useNavigate();
- 
+  const params=useParams()
+
+   useEffect(() => {
+    if (params.cityId) {
+      setCityId(params.cityId); // Fills field immediately!
+    }
+  }, []);
+  /*const uploadImage = async () => {
+    if (!file) return;
+    const form = new FormData();
+    form.append("file", file);
+    form.append("upload_preset", "bilelmrz");
+    //dy9upslic
+    //bilelmrz
+    try {
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/dy9upslic/upload`,
+        form,
+      );
+      console.log(response.data);
+      setCoverImageUrl(response.data.secure_url);
+      console.log("Upload success!");
+    } catch (error) {
+      console.error("Upload failed:", error);
+    }
+  };*/
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = {
@@ -39,7 +68,7 @@ function EditPlacePage() {
       lng,
       bestTimeToVisit,
       entryFeeTND,
-      coverImageUrl
+      coverImageUrl,
     };
     try {
       axios.post(`${import.meta.env.VITE_SERVER_URL}/places/`, body);
@@ -57,17 +86,10 @@ function EditPlacePage() {
           </Typography>
 
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-              
-             <TextField
+            <TextField
               fullWidth
               label="City id"
               value={cityId}
-              onChange={(e) => {
-                const numValue = parseInt(e.target.value);
-                if (!isNaN(numValue)) {
-                  setCityId(numValue);
-                }
-              }}
               sx={{ mb: 3 }}
               required
             />
@@ -79,7 +101,7 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="Category"
               value={category}
@@ -87,7 +109,7 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="short description"
               multiline
@@ -97,7 +119,7 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="Description longue"
               multiline
@@ -107,7 +129,7 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="adress"
               value={address}
@@ -115,11 +137,11 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="latitude"
               value={lat}
-               onChange={(e) => {
+              onChange={(e) => {
                 const numValue = parseInt(e.target.value);
                 if (!isNaN(numValue)) {
                   setLat(numValue);
@@ -128,11 +150,11 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
+            <TextField
               fullWidth
               label="lngitide"
               value={lng}
-               onChange={(e) => {
+              onChange={(e) => {
                 const numValue = parseInt(e.target.value);
                 if (!isNaN(numValue)) {
                   setLng(numValue);
@@ -141,7 +163,7 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-          
+
             <TextField
               fullWidth
               label="Best period to visit"
@@ -154,7 +176,7 @@ function EditPlacePage() {
               fullWidth
               label="fee of the entry"
               value={entryFeeTND}
-               onChange={(e) => {
+              onChange={(e) => {
                 const numValue = parseInt(e.target.value);
                 if (!isNaN(numValue)) {
                   setEntryFeeTND(numValue);
@@ -163,15 +185,28 @@ function EditPlacePage() {
               sx={{ mb: 3 }}
               required
             />
-             <TextField
-              fullWidth
-              label="image Url"
-              value={coverImageUrl}
-              onChange={(e) => setCoverImageUrl(e.target.value)}
-              sx={{ mb: 3 }}
-              required
-            />
-
+            <Box sx={{ mb: 3 }}>
+              {!coverImageUrl && <UploadImage setCoverImageUrl={(url)=>{setCoverImageUrl(url)}}/>}
+               {/*<>
+                  <input
+                    type="file"
+                    onChange={(e) => setFile(e.target.files[0])}
+                    style={{ marginBottom: "10px" }}
+                  />
+                  <Button onClick={uploadImage} disabled={!file || upload}>
+                    {upload ? "uploading ..." : "Uploaded"}
+                  </Button>
+                </> */} 
+             
+              {coverImageUrl && (
+                <TextField
+                  fullWidth
+                  label="Auto-filled-Image-Url"
+                  value={coverImageUrl}
+                  sx={{ mt: 2 }}
+                 />
+              )}
+            </Box>
             <Button
               type="submit"
               variant="contained"

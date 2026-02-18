@@ -20,7 +20,7 @@ function App() {
       <Route path="/" element={ <HomePage /> } />
       <Route path="/cities" element={<CitiesListPage />} />
       <Route path="cities/:cityId" element={<CityDetailsPage />} />
-      <Route path="/cities/create" element={<CreateCityPage />} />
+      <Route path="/cities/:cityId/create" element={<CreateCityPage />} />
       <Route path="places/:placeId" element={<PlaceDetailsPage />} />
       <Route path="/places/edit/:placeId" element={ <EditPlacePage /> } />
       <Route path="*" element={ <ErrorPage /> } />

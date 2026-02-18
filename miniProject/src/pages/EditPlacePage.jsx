@@ -8,6 +8,7 @@ import {
   CardContent,
   Typography,
   Container,
+  Modal,
 } from "@mui/material";
 import axios from "axios";
 function EditPlacePage() {
@@ -15,6 +16,14 @@ function EditPlacePage() {
   const [longDescription, setLongDescription] = useState(""); // these are to edit the place
   const [bestTimeToVisit, setBestTimeToVisit] = useState(""); // these are to edit the place
   const [place, setPlace] = useState(null); //this is to show the place info
+  const [open, setOpen] = useState(false);
+  
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const params = useParams();
   const navigate = useNavigate();
   useEffect(() => {
@@ -54,9 +63,37 @@ function EditPlacePage() {
           <Typography variant="h4" gutterBottom align="center" color="primary">
             ✏️ change place's information
           </Typography>
-
+          <Button onClick={handleOpen}>Open modal</Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="parent-modal-title"
+            aria-describedby="parent-modal-description"
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: 400,
+                bgcolor: "background.paper",
+                boxShadow: 24,
+                p: 4, // ✅ padding shorthand
+                borderRadius: 2, // ✅ rounded corners
+                outline: "none", // ✅ removes focus outline
+              }}
+            >
+              <Typography id="parent-modal-title" variant="h6" component="h2">
+                Info
+              </Typography>
+              <Typography sx={{ mt: 2 }}>
+                PLace has many proprieties but you are allowed to just change
+                few informations.
+              </Typography>
+            </Box>
+          </Modal>
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-          
             <TextField
               fullWidth
               label="fee of the entry"

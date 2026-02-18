@@ -4,8 +4,8 @@ import PlaceCard from "../components/PlaceCard";
 import axios from "axios";
 import { Stack, Typography, Button } from '@mui/material';
 function CityDetailsPage() {
-  const [city, setCity] = useState(null);
-  const params = useParams();
+const [city, setCity] = useState(null);
+const params = useParams();
   useEffect(() => {
     getCity();
   }, []);
@@ -33,7 +33,7 @@ function CityDetailsPage() {
     >
       <Button
         component={Link}
-        to="/cities/create"
+        to={`/cities/${params.cityId}/create`}
         variant="contained"
         size="large"
         sx={{
