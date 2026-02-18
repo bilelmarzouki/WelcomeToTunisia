@@ -8,7 +8,7 @@ function CitiesListPage() {
        getDate()
     },[])
     const getDate=async()=>{
-        const response = await axios.get(`http://localhost:5005/cities`)
+        const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/cities`)
         console.log(response.data)
         setCities(response.data)
     }

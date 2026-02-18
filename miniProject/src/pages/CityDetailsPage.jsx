@@ -12,7 +12,7 @@ function CityDetailsPage() {
   const getCity = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5005/cities/${params.cityId}?_embed=places`,
+        `${import.meta.env.VITE_SERVER_URL}/cities/${params.cityId}?_embed=places`,
       );
       console.log(response.data);
       setCity(response.data);

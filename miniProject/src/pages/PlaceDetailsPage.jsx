@@ -27,7 +27,7 @@ function PlaceDetailsPage() {
   const getImages = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5005/places/${params.placeId}?_embed=photos`,
+        `${import.meta.env.VITE_SERVER_URL}/places/${params.placeId}?_embed=photos`,
       );
       console.log(response);
       setPlace(response.data);

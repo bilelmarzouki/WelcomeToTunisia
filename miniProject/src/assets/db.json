@@ -79,15 +79,15 @@
     {
       "id": 103,
       "cityId": 1,
-      "name": "Marsa beach",
+      "name": "Marsa",
       "category": "beach",
-      "shortDescription": "Chic Tunis beach with fine sand and elegant promenade.",
-      "longDescription": "La Marsa Beach - Tunis' trendiest beach! Fine golden sand, turquoise Mediterranean waters, palm-lined seaside promenade with chic cafés. Perfect for sunbathing, swimming, and strolling. Best May-June and September. Just 20min from Tunis center.",
-      "address": "Marsa, Tunis",
-      "lat": "65",
-      "lng": "40",
-      "bestTimeToVisit": "late",
-      "entryFeeTND": "2",
+      "shortDescription": "Marsa is a city near Tunisa",
+      "longDescription": "masra blasa bhia barcha bjanb touns tetmyz b zinha w denia ma7leha ghadi",
+      "address": "Marsa, Tunis ",
+      "lat": 22,
+      "lng": 22,
+      "bestTimeToVisit": "fi lil",
+      "entryFeeTND": 3,
       "coverImageUrl": "https://www.khllifestyle.com/application/files/9417/4168/2578/LM_Plage.jpg"
     }
   ],

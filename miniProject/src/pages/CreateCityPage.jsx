@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import axios from "axios";
 function EditPlacePage() {
-  const [id, setId] = useState(null);
   const [cityId, setCityId] = useState(null);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -43,7 +42,7 @@ function EditPlacePage() {
       coverImageUrl
     };
     try {
-      axios.post(`http://localhost:5005/places/`, body);
+      axios.post(`${import.meta.env.VITE_SERVER_URL}/places/`, body);
       navigate(`/cities/${cityId}`);
     } catch (error) {
       console.log(error);
@@ -58,19 +57,7 @@ function EditPlacePage() {
           </Typography>
 
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-              <TextField
-              fullWidth
-              label="place id"
-              value={id}
-              onChange={(e) => {
-                const numValue = parseInt(e.target.value);
-                if (!isNaN(numValue)) {
-                  setId(numValue);
-                }
-              }}
-              sx={{ mb: 3 }}
-              required
-            />
+              
              <TextField
               fullWidth
               label="City id"
@@ -132,7 +119,12 @@ function EditPlacePage() {
               fullWidth
               label="latitude"
               value={lat}
-              onChange={(e) => setLat(e.target.value)}
+               onChange={(e) => {
+                const numValue = parseInt(e.target.value);
+                if (!isNaN(numValue)) {
+                  setLat(numValue);
+                }
+              }}
               sx={{ mb: 3 }}
               required
             />
@@ -140,7 +132,12 @@ function EditPlacePage() {
               fullWidth
               label="lngitide"
               value={lng}
-              onChange={(e) => setLng(e.target.value)}
+               onChange={(e) => {
+                const numValue = parseInt(e.target.value);
+                if (!isNaN(numValue)) {
+                  setLng(numValue);
+                }
+              }}
               sx={{ mb: 3 }}
               required
             />
@@ -157,7 +154,12 @@ function EditPlacePage() {
               fullWidth
               label="fee of the entry"
               value={entryFeeTND}
-              onChange={(e) => setEntryFeeTND(e.target.value)}
+               onChange={(e) => {
+                const numValue = parseInt(e.target.value);
+                if (!isNaN(numValue)) {
+                  setEntryFeeTND(numValue);
+                }
+              }}
               sx={{ mb: 3 }}
               required
             />

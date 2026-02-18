@@ -23,7 +23,7 @@ function EditPlacePage() {
   const editForm = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5005/places/${params.placeId}`,
+        `${import.meta.env.VITE_SERVER_URL}/places/${params.placeId}`,
       );
       setEntryFeeTND(response.data.entryFeeTND);
       setLongDescription(response.data.longDescription);
