@@ -63,7 +63,7 @@ function EditPlacePage() {
           <Typography variant="h4" gutterBottom align="center" color="primary">
             ✏️ change place's information
           </Typography>
-          <Button onClick={handleOpen}>Open modal</Button>
+          <Button onClick={handleOpen}>Click me to know What Can you Edit?</Button>
           <Modal
             open={open}
             onClose={handleClose}
@@ -79,17 +79,18 @@ function EditPlacePage() {
                 width: 400,
                 bgcolor: "background.paper",
                 boxShadow: 24,
-                p: 4, // ✅ padding shorthand
-                borderRadius: 2, // ✅ rounded corners
-                outline: "none", // ✅ removes focus outline
+                p: 4, 
+                borderRadius: 2,
+                outline: "none", 
+                color: 'black !important',        // ✅ FORCE BLACK TEXT
+                backgroundColor: 'white !important' // ✅ FORCE WHITE BACKGROUND
               }}
             >
-              <Typography id="parent-modal-title" variant="h6" component="h2">
-                Info
+              <Typography id="parent-modal-title" variant="h6" component="h2" color="red">
+                Info:
               </Typography>
               <Typography sx={{ mt: 2 }}>
-                PLace has many proprieties but you are allowed to just change
-                few informations.
+                This place has lots of properties, but only a few can be edited which are: fee of the entry, the Description, and Best time to visit.
               </Typography>
             </Box>
           </Modal>
@@ -105,7 +106,7 @@ function EditPlacePage() {
 
             <TextField
               fullWidth
-              label="Description longue"
+              label="  long Description"
               multiline
               rows={4}
               value={longDescription}
@@ -115,7 +116,7 @@ function EditPlacePage() {
 
             <TextField
               fullWidth
-              label="Meilleure période"
+              label="best Time to Visit"
               value={bestTimeToVisit}
               onChange={(e) => setBestTimeToVisit(e.target.value)}
               sx={{ mb: 4 }}

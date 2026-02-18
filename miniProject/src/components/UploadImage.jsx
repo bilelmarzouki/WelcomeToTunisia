@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Modal } from "@mui/material";
+import { Box, Button, CircularProgress, Modal } from "@mui/material";
 import axios from "axios";
 function UploadImage({setCoverImageUrl}) {
   const [file, setFile] = useState(""); // Keep for upload state
@@ -26,6 +26,7 @@ function UploadImage({setCoverImageUrl}) {
   };
   const uploadImage = async () => {
     if (!file) return;
+    setUpload(true)
     const form = new FormData();
     form.append("file", file);
     form.append("upload_preset", "bilelmrz");
@@ -37,6 +38,7 @@ function UploadImage({setCoverImageUrl}) {
         form,
       );
       console.log(response.data);
+      setUpload(false)
       setCoverImageUrl(response.data.secure_url);
       console.log("Upload success!");
     } catch (error) {
@@ -45,7 +47,7 @@ function UploadImage({setCoverImageUrl}) {
   };
   return (
     <>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen}>click me to upload an Image of the place</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -58,8 +60,11 @@ function UploadImage({setCoverImageUrl}) {
             onChange={(e) => setFile(e.target.files[0])}
             style={{ marginBottom: "10px" }}
           />
-          <Button onClick={uploadImage} disabled={!file || upload}>
-            {upload ? "uploading ..." : "Uploaded"}
+          
+          <Button onClick={uploadImage} disabled={!file || upload}
+           startIcon={upload? <CircularProgress size={30} />:null}
+          >
+            {upload ? "uploading ..." : "Upload"}
           </Button>
         </Box>
       </Modal>
