@@ -7,7 +7,6 @@ try {
 // backend development still uses ES5
 // import jsonServer from "json-server" // ES6
 const jsonServer = require("json-server") // ES5
-const path = require('path')
 const server = jsonServer.create()
 
 // add the default configurations of the system
@@ -15,7 +14,7 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 
 // add the routes (defaults)
-const router = jsonServer.router(path.join(__dirname,"miniProject/src/assets/db.json"))
+const router = jsonServer.router("db.json")
 server.use(router)
 
 const PORT = process.env.PORT || 5005
