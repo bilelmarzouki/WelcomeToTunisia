@@ -152,7 +152,7 @@ function EditPlacePage() {
             />
             <TextField
               fullWidth
-              label="lngitide"
+              label="longitude"
               value={lng}
               onChange={(e) => {
                 const numValue = parseInt(e.target.value);

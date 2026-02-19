@@ -13,4 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+/*footer {
+  height: 50px;
+  background-color: #b30a0a;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}*/
+nav {
+  height: 60px;
+  background-color:  #b30a0a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
