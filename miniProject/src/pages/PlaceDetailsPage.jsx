@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Map from '../components/Map'
 import {
   Grid,
   Box,
@@ -41,6 +42,7 @@ function PlaceDetailsPage() {
  
   return (
     <Box sx={{ px: 2, py: 3 }}>
+      <Map/>
       <Grid container spacing={2}>
         {place.photos.map((photo) => {
           return (

@@ -8,6 +8,7 @@ import ErrorPage from "./pages/ErrorPage"
 import PlaceDetailsPage from "./pages/PlaceDetailsPage"
 import EditPlacePage from "./pages/EditPlacePage"
 import Navbar from "./components/Navbar"
+import NotFoundPage from "./pages/NotFoundPage"
 
 
 function App() {
@@ -19,11 +20,12 @@ function App() {
     <Routes>
       <Route path="/" element={ <HomePage /> } />
       <Route path="/cities" element={<CitiesListPage />} />
-      <Route path="cities/:cityId" element={<CityDetailsPage />} />
+      <Route path="/cities/:cityId" element={<CityDetailsPage />} />
       <Route path="/cities/:cityId/create" element={<CreateCityPage />} />
-      <Route path="places/:placeId" element={<PlaceDetailsPage />} />
+      <Route path="/places/:placeId" element={<PlaceDetailsPage />} />
       <Route path="/places/edit/:placeId" element={ <EditPlacePage /> } />
-      <Route path="*" element={ <ErrorPage /> } />
+      <Route path="/error" element={ <ErrorPage /> } />
+      <Route path="*" element={ <NotFoundPage /> } />
 
     </Routes>
     

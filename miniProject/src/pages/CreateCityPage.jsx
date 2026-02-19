@@ -23,41 +23,18 @@ function EditPlacePage() {
   const [bestTimeToVisit, setBestTimeToVisit] = useState("");
   const [entryFeeTND, setEntryFeeTND] = useState("");
   const [coverImageUrl, setCoverImageUrl] = useState("");
-  /*const [file, setFile] = useState(""); // Keep for upload state
-  const [upload, setUpload] = useState(false);*/
   const navigate = useNavigate();
   const params=useParams()
 
    useEffect(() => {
     if (params.cityId) {
-      setCityId(params.cityId); // Fills field immediately!
+      const cityIdNum = parseInt(params.cityId, 10);  // Convert string → number
+      setCityId(cityIdNum); 
     }
   }, []);
-  /*const uploadImage = async () => {
-    if (!file) return;
-    const form = new FormData();
-    form.append("file", file);
-    form.append("upload_preset", "bilelmrz");
-    //dy9upslic
-    //bilelmrz
-    try {
-      const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/dy9upslic/upload`,
-        form,
-      );
-      console.log(response.data);
-      setCoverImageUrl(response.data.secure_url);
-      console.log("Upload success!");
-    } catch (error) {
-      console.error("Upload failed:", error);
-    }
-  };*/
-
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const body = {
-      id,
       cityId,
       name,
       category,
@@ -67,12 +44,14 @@ function EditPlacePage() {
       lat,
       lng,
       bestTimeToVisit,
-      entryFeeTND,
+      entryFeeTND:parseFloat(entryFeeTND),
       coverImageUrl,
     };
     try {
-      axios.post(`${import.meta.env.VITE_SERVER_URL}/places/`, body);
+      const response=await axios.post(`${import.meta.env.VITE_SERVER_URL}/places/`, body); // add to the db.json plcaes collection, we should await before navigate
+      console.log("Server response:", response.data); 
       navigate(`/cities/${cityId}`);
+      console.log("create sucessfully")
     } catch (error) {
       console.log(error);
     }
@@ -141,11 +120,9 @@ function EditPlacePage() {
               fullWidth
               label="latitude"
               value={lat}
+              type="number"
               onChange={(e) => {
-                const numValue = parseInt(e.target.value);
-                if (!isNaN(numValue)) {
-                  setLat(numValue);
-                }
+                  setLat(e.target.value);
               }}
               sx={{ mb: 3 }}
               required
@@ -154,11 +131,9 @@ function EditPlacePage() {
               fullWidth
               label="longitude"
               value={lng}
+              type="number"
               onChange={(e) => {
-                const numValue = parseInt(e.target.value);
-                if (!isNaN(numValue)) {
-                  setLng(numValue);
-                }
+                  setLng(e.target.value);
               }}
               sx={{ mb: 3 }}
               required
@@ -176,28 +151,17 @@ function EditPlacePage() {
               fullWidth
               label="fee of the entry"
               value={entryFeeTND}
+              type="number"
               onChange={(e) => {
-                const numValue = parseInt(e.target.value);
-                if (!isNaN(numValue)) {
-                  setEntryFeeTND(numValue);
-                }
+                  setEntryFeeTND(e.target.value);
+
               }}
               sx={{ mb: 3 }}
               required
             />
             <Box sx={{ mb: 3 }}>
               {!coverImageUrl && <UploadImage setCoverImageUrl={(url)=>{setCoverImageUrl(url)}}/>}
-               {/*<>
-                  <input
-                    type="file"
-                    onChange={(e) => setFile(e.target.files[0])}
-                    style={{ marginBottom: "10px" }}
-                  />
-                  <Button onClick={uploadImage} disabled={!file || upload}>
-                    {upload ? "uploading ..." : "Uploaded"}
-                  </Button>
-                </> */} 
-             
+            
               {coverImageUrl && (
                 <TextField
                   fullWidth

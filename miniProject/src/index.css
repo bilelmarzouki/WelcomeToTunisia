@@ -32,3 +32,7 @@ nav {
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.leaflet-container {
+  height: 400px; /* example */
+  width: 400px; /* example */
+}

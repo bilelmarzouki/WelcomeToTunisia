@@ -5,9 +5,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link as MuiLink } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 function PlaceCard({
   id,
+  cityId,
   name,
   category,
   shortDescription,
@@ -19,6 +22,8 @@ function PlaceCard({
   entryFeeTND,
   coverImageUrl,
 }) {
+  const [clicked, setClicked]=useState(false)
+  const navigate=useNavigate()
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia sx={{ height: 140 }} image={coverImageUrl} title="Tunis" />
@@ -72,6 +77,18 @@ function PlaceCard({
         >
           Edit Info
         </Button>
+        <Button 
+          onClick={() => {
+            console.log('🚨 PLACE CARD DEBUG:', { lat, lng, id, name });
+            if (!lat || !lng) {
+              console.error('❌ NO LAT/LNG!', { lat, lng });
+              return;
+            }
+            navigate(`/places/${id}?lat=${lat}&lng=${lng}&address=${encodeURIComponent(address)}`);
+          }}
+        >
+          {<LocationOnIcon sx={{ fontSize: 40 }} />}
+       </Button>
       </CardActions>
     </Card>
   );
