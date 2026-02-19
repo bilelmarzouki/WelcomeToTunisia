@@ -14,9 +14,10 @@ import NotFoundPage from "./pages/NotFoundPage"
 function App() {
 
   return (
-    <>
+    <div className="app-root">
     <Navbar />
 
+    <main className="app-main">
     <Routes>
       <Route path="/" element={ <HomePage /> } />
       <Route path="/cities" element={<CitiesListPage />} />
@@ -28,10 +29,10 @@ function App() {
       <Route path="*" element={ <NotFoundPage /> } />
 
     </Routes>
-    
-    <Footer/>
+    </main>
 
-    </>
+    <Footer/>
+    </div>
   )
 }
 

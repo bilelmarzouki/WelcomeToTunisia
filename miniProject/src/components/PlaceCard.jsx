@@ -25,9 +25,9 @@ function PlaceCard({
   const [clicked, setClicked]=useState(false)
   const navigate=useNavigate()
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', height: '100%' }}>
       <CardMedia sx={{ height: 140 }} image={coverImageUrl} title="Tunis" />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
@@ -50,15 +50,14 @@ function PlaceCard({
           The entry fee is :{entryFeeTND} TND
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ mt: 'auto', display: 'flex', justifyContent: 'space-between', gap: 1 }}>
         <Button
           component={Link}
           to={`/places/${id}`}
           variant="contained"
           size="small"
           sx={{
-            alignSelf: "start",
-            px: 4,
+            px: 1,
             fontSize: "1rem",
           }}
         >
@@ -70,8 +69,7 @@ function PlaceCard({
           variant="contained"
           size="small"
           sx={{
-            alignSelf: "start",
-            px: 4,
+            px: 1,
             fontSize: "1rem",
           }}
         >

@@ -36,3 +36,87 @@ nav {
   height: 400px; /* example */
   width: 400px; /* example */
 }
+
+/* Layout helpers for sticky footer */
+html, body, #root {
+  height: 100%;
+}
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-main {
+  flex: 1 1 auto;
+}
+
+.footer-container {
+  height: 60px;
+  background-color: #b30a0a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Home page styles */
+.home-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+.home-hero-card {
+  width: 100%;
+  max-width: 1000px;
+}
+.home-title {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.home-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 12px;
+  color: #eee;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+.home-intro {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.photo-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.photo-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.photo-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+.photo-item img:hover {
+  transform: scale(1.03) translateY(-3px);
+}
+
+@media (max-width: 720px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+  .photo-item img {
+    height: 200px;
+  }
+}
