@@ -1,16 +1,35 @@
-# React + Vite
+# Tunisia Tourism Map - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive React-based web app showcasing Tunisia's top tourist attractions on a dynamic map.
 
-Currently, two official plugins are available:
+## Features
+- **Country Overview**: Information about Tunisia on the home page (history, geography, travel tips).
+- **Touristic Cities**: Browse cities like Tunis, Sousse.
+- **City Attractions**: View all places within each city with detailed information.
+- **Individual Place Details**: Photos, Location in the map.
+- **Interactive Maps**: See exact locations with markers (Leaflet).
+- **User Contributions**: Add new places you've visited to help others.
+- **Edit Places**: Update existing attraction information.
+- **Fully Responsive**: Optimized for mobile, tablet, and desktop.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React 19+ (hooks: useState, useEffect, custom hooks)
+- Material-UI (MUI) for components and theming
+- React Router for navigation
+- Leaflet.js
+- Axios for API calls
+- Vite for build tooling
+- Git/GitHub
 
-## React Compiler
+## Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone repo:
+   ```bash
+   git clone https://github.com/bilelmarzouki/WelcomeToTunisia.git
+   cd WelcomeToTunisia
+   cd miniProject
+1. Start Frontend:
+    ```bash
+   npm run dev
+ 
+   
