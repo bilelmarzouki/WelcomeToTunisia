@@ -59,7 +59,7 @@
       "lat": 35.8264,
       "lng": 10.6386,
       "bestTimeToVisit": "Late afternoon",
-      "entryFeeTND": "6",
+      "entryFeeTND": "7",
       "coverImageUrl": "https://media.gettyimages.com/id/1371714391/photo/tunisia-sousse-medina.jpg?s=1024x1024&w=gi&k=20&c=Iexw_5tWs3Bh__UTK9OK4paiiXBHln82WZWT2EkAJMI="
     },
     {
@@ -73,7 +73,7 @@
       "lat": 35.8361,
       "lng": 10.637,
       "bestTimeToVisit": "Summer mornings",
-      "entryFeeTND": "6",
+      "entryFeeTND": "11",
       "coverImageUrl": "https://www.tourismtunisia.com/wp-content/uploads/2012/03/Sousse.jpg"
     },
     {
@@ -84,11 +84,53 @@
       "shortDescription": "Marsa is a city near Tunisa",
       "longDescription": "masra blasa bhia barcha bjanb touns tetmyz b zinha w denia ma7leha ghadi",
       "address": "Marsa, Tunis ",
-      "lat": 22,
-      "lng": 22,
+      "lat": 36.89389,
+      "lng": 10.32169,
       "bestTimeToVisit": "fi lil",
       "entryFeeTND": 3,
       "coverImageUrl": "https://www.khllifestyle.com/application/files/9417/4168/2578/LM_Plage.jpg"
+    },
+    {
+      "id": 203,
+      "cityId": 1,
+      "name": "Carthage Ruins",
+      "category": "Historic",
+      "shortDescription": "Rome's greatest rival - Hannibal's city",
+      "longDescription": "UNESCO site: Punic ports, Antoninus Baths, amphitheater, Byrsa Hill. Where the Punic Wars began",
+      "address": "Carthage Hill, Tunis",
+      "lat": "36.8596",
+      "lng": "10.3298",
+      "bestTimeToVisit": "morning",
+      "entryFeeTND": "5",
+      "coverImageUrl": "https://res.cloudinary.com/dy9upslic/image/upload/v1771513269/whsokpo9mglrf4fanprz.jpg"
+    },
+    {
+      "cityId": 2,
+      "name": "Ribat of Sousse",
+      "category": "Historic",
+      "shortDescription": "9th century fortress overlooking the sea.",
+      "longDescription": "UNESCO-listed Ribat fortress built in 821 AD. Climb the tower for panoramic views of Sousse Medina and Mediterranean. Best preserved Islamic fortress in North Africa.",
+      "address": "Ribat El-Kebir, Medina de Sousse",
+      "lat": "35.8248",
+      "lng": "10",
+      "bestTimeToVisit": "morning",
+      "entryFeeTND": 5,
+      "coverImageUrl": "https://res.cloudinary.com/dy9upslic/image/upload/v1771515226/kneacxzejy4ututxamh3.webp",
+      "id": 204
+    },
+    {
+      "cityId": 2,
+      "name": "Samara Beach",
+      "category": "Beach",
+      "shortDescription": "Tranquil white-sand beach north of city center.",
+      "longDescription": "Pristine extension of Boujaafar Beach with fewer crowds. Perfect for couples and relaxation. Same crystal-clear waters but more serene atmosphere away from main tourist area.",
+      "address": "Samara Beach, Corniche Nord, Sousse",
+      "lat": "35.8375",
+      "lng": "10.6308",
+      "bestTimeToVisit": "Morning",
+      "entryFeeTND": 0,
+      "coverImageUrl": "https://res.cloudinary.com/dy9upslic/image/upload/v1771515492/ik68izt9dty6ltppfwch.webp",
+      "id": 205
     }
   ],
   "photos": [

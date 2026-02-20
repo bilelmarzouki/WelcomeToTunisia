@@ -19,7 +19,6 @@ function PlaceDetailsPage() {
   const isXs = useMediaQuery(theme.breakpoints.down("sm"));
   const isSm = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-  // Responsive columns
   const cols = isXs ? 1 : isSm ? 2 : 3;
   useEffect(() => {
     getImages();

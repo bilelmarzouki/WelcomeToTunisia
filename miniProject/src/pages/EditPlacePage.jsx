@@ -82,8 +82,8 @@ function EditPlacePage() {
                 p: 4, 
                 borderRadius: 2,
                 outline: "none", 
-                color: 'black !important',        // ✅ FORCE BLACK TEXT
-                backgroundColor: 'white !important' // ✅ FORCE WHITE BACKGROUND
+                color: 'black !important',        
+                backgroundColor: 'white !important'
               }}
             >
               <Typography id="parent-modal-title" variant="h6" component="h2" color="red">
@@ -128,7 +128,7 @@ function EditPlacePage() {
               fullWidth
               size="large"
               sx={{
-                py: 1.5,
+                py: 1,
                 fontSize: "1.1rem",
                 bgcolor: "primary.main",
                 "&:hover": { bgcolor: "primary.dark" },

@@ -28,7 +28,7 @@ function EditPlacePage() {
 
    useEffect(() => {
     if (params.cityId) {
-      const cityIdNum = parseInt(params.cityId, 10);  // Convert string → number
+      const cityIdNum = parseInt(params.cityId, 10); 
       setCityId(cityIdNum); 
     }
   }, []);
@@ -177,7 +177,7 @@ function EditPlacePage() {
               fullWidth
               size="large"
               sx={{
-                py: 1.5,
+                py: 1,
                 fontSize: "1.1rem",
                 bgcolor: "primary.main",
                 "&:hover": { bgcolor: "primary.dark" },
