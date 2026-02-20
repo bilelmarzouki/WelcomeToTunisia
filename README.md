@@ -70,3 +70,6 @@ PATCH /places/5
    ```bash
    git clone https://github.com/bilelmarzouki/WelcomeToTunisia.git
    cd WelcomeToTunisia
+3. start the server side:
+  ```bash
+  node server.js
