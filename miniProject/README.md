@@ -28,7 +28,7 @@ Interactive React-based web app showcasing Tunisia's top tourist attractions on 
    git clone https://github.com/bilelmarzouki/WelcomeToTunisia.git
    cd WelcomeToTunisia
    cd miniProject
-1. Start Fronend:
+1. Start Frontend:
    npm run dev
  
    
