@@ -50,7 +50,7 @@ function EditPlacePage() {
       bestTimeToVisit,
     };
     try {
-      await axios.patch(`http://localhost:5005/places/${params.placeId}`, body);
+      await axios.patch(`${import.meta.env.VITE_SERVER_URL}/places/${params.placeId}`, body);
       navigate(`/cities/${place.cityId}`);
     } catch (error) {
       console.log(error);

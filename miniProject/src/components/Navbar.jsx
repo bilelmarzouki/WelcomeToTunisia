@@ -6,8 +6,8 @@ function Navbar() {
    <nav>
      <h1>Tunisia Tourism Map</h1>
      <Typography variant="h6">
-      <MuiLink component={Link} to={"/"}>Home</MuiLink> |
-      <MuiLink component={Link} to={"/cities"}> Cities </MuiLink>
+      <MuiLink component={Link} to={"/"} style={{color:"white"}}>Home</MuiLink> |
+      <MuiLink component={Link} to={"/cities"} style={{color:"white"}}> Cities </MuiLink>
     </Typography>
    </nav>
   )
