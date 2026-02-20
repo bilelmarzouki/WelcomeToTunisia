@@ -29,6 +29,7 @@ Interactive React-based web app showcasing Tunisia's top tourist attractions on 
    cd WelcomeToTunisia
    cd miniProject
 1. Start Frontend:
+    ```bash
    npm run dev
  
    
