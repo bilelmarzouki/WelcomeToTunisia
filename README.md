@@ -67,6 +67,7 @@ PATCH /places/5
 1. Ensure Node.js is installed
 
 2. Clone repo:
-   ```bash
    git clone https://github.com/bilelmarzouki/WelcomeToTunisia.git
    cd WelcomeToTunisia
+3. start the server side:
+  node server.js
