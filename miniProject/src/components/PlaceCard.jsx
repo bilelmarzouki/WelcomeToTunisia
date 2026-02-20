@@ -36,23 +36,23 @@ function PlaceCard({
           {shortDescription}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Long Description:</span>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Long Description:</span>
           {longDescription}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Address:</span>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Address:</span>
           {address}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Category:</span>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Category:</span>
           This place is considered a {category} place.
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Visit time:</span>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Visit time:</span>
           Best time to visit is {bestTimeToVisit}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Price:</span>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Price:</span>
           {entryFeeTND} TND
         </Typography>
       </CardContent>
