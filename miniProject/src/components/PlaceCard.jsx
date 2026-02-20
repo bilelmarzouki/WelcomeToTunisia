@@ -32,22 +32,28 @@ function PlaceCard({
           {name}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <span style={{ color: '#7e3131', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Short Description:</span>
           {shortDescription}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Long Description:</span>
           {longDescription}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          The address is :{address}
+          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Address:</span>
+          {address}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          This place is consider as a {category} place.
+          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Category:</span>
+          This place is considered a {category} place.
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Best time to visit is in the {bestTimeToVisit}
+          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Visit time:</span>
+          Best time to visit is {bestTimeToVisit}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          The entry fee is :{entryFeeTND} TND
+          <span style={{ color: '#b30a0a', fontWeight: 700, fontSize: '1rem', marginRight: 8 }}>Price:</span>
+          {entryFeeTND} TND
         </Typography>
       </CardContent>
       <CardActions sx={{ mt: 'auto', display: 'flex', justifyContent: 'space-between', gap: 1 }}>
