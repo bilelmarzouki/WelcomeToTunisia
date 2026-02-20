@@ -41,7 +41,7 @@ function PlaceDetailsPage() {
  
   return (
     <Box sx={{ px: 2, py: 3 }}>
-      <Box sx={{ mb: 2, borderRadius: 2, overflow: 'hidden', boxShadow: 3, border: '1px solid rgba(255,255,255,0.04)' }}>
+      <Box sx={{ mb: 2, borderRadius: 2, overflow: 'hidden', boxShadow: 4, border: '1px solid rgba(255,255,255,0.04)' }}>
         <Map style={{ minHeight: 360 }} />
       </Box>
       <Grid container spacing={2}>
